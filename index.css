@@ -26,34 +26,32 @@
 }
 
 /** 背景 */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg); /* 背景图片，可自行替换 */
-  z-index: 0;
+}
+
+/**白天模式背景*/
+body.hope-ui-light {
+  background-image: linear-gradient(rgba(200, 200, 200, 0.4), rgba(200, 200, 200, 0.4)), url('https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg');
+}
+
+/**夜间模式背景*/
+body.hope-ui-dark {
+  background-color: rgb(32, 36, 37);
+  background-image: linear-gradient(rgba(32, 36, 37, 0.7), rgba(32, 36, 37, 0.7)), url('https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg');
 }
 
 @media screen and (max-width: 960px) {
-  body::before {
-    background-image: url(https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg); /* 竖屏背景图片，可自行替换 */
+  body.hope-ui-light {
+    background-image: linear-gradient(rgba(200, 200, 200, 0.4), rgba(200, 200, 200, 0.4)), url('https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg');
   }
-}
-
-/**白天背景稍亮*/
-body.hope-ui-light::before {
-  filter: blur(3px) brightness(0.7);
-}
-/**夜间背景稍暗*/
-body.hope-ui-dark::before {
-  filter: blur(3px) brightness(0.3);
+  
+  body.hope-ui-dark {
+    background-image: linear-gradient(rgba(32, 36, 37, 0.7), rgba(32, 36, 37, 0.7)), url('https://p.inari.site/guest/25-07/31/688b2cf7b1aaa.jpg');
+  }
 }
 
 div#root {
