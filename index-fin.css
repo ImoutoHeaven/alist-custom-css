@@ -1,7 +1,7 @@
 :root {
   --mio-main: 255, 255, 255;
   --mio-text: 0, 0, 0;
-  --mio-primary: 255, 105, 180; /* 主题色 #ff69b4 粉色 */
+  --mio-primary: 231, 142, 152; /* 主题色 #E78E98 */
   --mio-primary50: 63, 194, 214;
   --mio-main-opacity: 0.3;
   --hope-colors-info9: rgba(var(--mio-primary), 1);
